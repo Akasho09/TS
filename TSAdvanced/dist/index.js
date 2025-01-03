@@ -1,7 +1,52 @@
 "use strict";
+// interface User {
+//     name : string,
+//     age : number 
+// };
 ;
-function sumOfAges(user1, user2) {
-    return user1.age + user2.age;
+function updateUser(newDetails) {
+    // db call
 }
-let ageSum = sumOfAges({ name: "akash", age: 20 }, { name: "malik", age: 30 });
-console.log(ageSum);
+const p1 = {
+    fName: "akash",
+    lName: "mlaik"
+};
+const p2 = {
+    fName: "akash",
+    lName: "mlaik"
+};
+const emps = {
+    1: {
+        fName: "AKASH",
+        lName: "Malik",
+        age: 12
+    },
+    2: {
+        fName: "Shahid",
+        lName: "Ahmad",
+        age: 21
+    }
+};
+console.log(emps["1"]);
+console.log(emps[1]);
+const emps2 = {
+    2: {
+        fName: "AKASH",
+        lName: "Malik",
+        age: 12
+    },
+    1: {
+        fName: "Shahid",
+        lName: "Ahmad",
+        age: 21
+    }
+};
+console.log(emps2["1"]);
+console.log(emps2[1]);
+// MAP
+const users = new Map();
+users.set(1, { fname: "akash", lname: "malik", age: 21 });
+users.set(2, { fname: "shahid", lname: "malik", age: 22 });
+function eventfn(s) { }
+eventfn("scroll");
+// eventfn("drag")

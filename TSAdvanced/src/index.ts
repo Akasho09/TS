@@ -27,7 +27,7 @@ function updateUser(newDetails : updateUserPropsOptional){
 }
 
 
-interface Person  {
+interface Person {
     readonly fName  :  string
     readonly lName : string
 }
@@ -46,3 +46,68 @@ const p2 : Person = {
 
 // p1.fName= "ahmad"
 // p2.lName="malik2"
+
+
+// RECORD
+
+interface empDetails {
+    [SNo:number] : {
+        fName : string,
+        lName : string,
+        age : number
+    }
+}
+
+const emps:empDetails = {
+     1 :{
+        fName : "AKASH",
+        lName : "Malik",
+        age : 12
+     },
+     2 : {
+        fName : "Shahid",
+        lName : "Ahmad",
+        age : 21
+     }
+}
+
+console.log(emps["1"])
+console.log(emps[1])
+
+type empDetails2 = Record < number , {fName : string , lName: string ,age: number}>
+
+const emps2 : empDetails2 = {
+    2 :{
+       fName : "AKASH",
+       lName : "Malik",
+       age : 12
+    },
+    1 : {
+       fName : "Shahid",
+       lName : "Ahmad",
+       age : 21
+    }
+}
+
+console.log(emps2["1"])
+console.log(emps2[1])
+
+
+// MAP
+
+const users = new Map<number, {fname:string,lname:string, age: number}>()
+
+users.set(1 , {fname:"akash" , lname : "malik" , age : 21})
+users.set(2, { fname:"shahid" , lname:"malik" , age:22})
+
+
+// exclude --opp to pick
+
+type event = "click" | "scroll" | "drag"
+type asalEvent = Exclude <event,"drag">
+
+function eventfn(s:asalEvent){}
+
+eventfn("scroll")
+// eventfn("drag")
+
