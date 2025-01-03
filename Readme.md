@@ -75,3 +75,5 @@ For example:
 
 # types 
 [text](types.md)
+
+# readonly
